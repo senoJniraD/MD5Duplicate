@@ -9,5 +9,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Server=DESKTOP-GN105NK; Database=test_2; user id=diskobat; password=Atc200x1;</Value>
     </Setting>
+    <Setting Name="SQL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT filename, upper(file_checksum) as [file_checksum] FROM dbo.infohash</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

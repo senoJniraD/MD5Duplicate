@@ -32,5 +32,17 @@ namespace MD5Duplicate.Properties {
                 return ((string)(this["ConString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SELECT filename, upper(file_checksum) as [file_checksum] FROM dbo.infohash")]
+        public string SQL {
+            get {
+                return ((string)(this["SQL"]));
+            }
+            set {
+                this["SQL"] = value;
+            }
+        }
     }
 }

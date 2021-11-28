@@ -1,7 +1,7 @@
 ﻿
 namespace MD5Duplicate
 {
-    partial class Form1
+    partial class formMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -46,9 +46,9 @@ namespace MD5Duplicate
             this.zCount = new System.Windows.Forms.Label();
             this.cCount = new System.Windows.Forms.Label();
             this.rCount = new System.Windows.Forms.Label();
-            this.pBar1 = new System.Windows.Forms.ProgressBar();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.sLabel = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.zipGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SQLGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,7 +63,7 @@ namespace MD5Duplicate
             this.fButton.TabIndex = 0;
             this.fButton.Text = "Get Files";
             this.fButton.UseVisualStyleBackColor = true;
-            this.fButton.Click += new System.EventHandler(this.button1_Click);
+            this.fButton.Click += new System.EventHandler(this.go_Click);
             // 
             // pBox
             // 
@@ -87,7 +87,7 @@ namespace MD5Duplicate
             this.cButton.TabIndex = 6;
             this.cButton.Text = "File";
             this.cButton.UseVisualStyleBackColor = true;
-            this.cButton.Click += new System.EventHandler(this.button2_Click);
+            this.cButton.Click += new System.EventHandler(this.file_Click);
             // 
             // openFileDialog1
             // 
@@ -259,28 +259,29 @@ namespace MD5Duplicate
             this.rCount.Size = new System.Drawing.Size(0, 15);
             this.rCount.TabIndex = 17;
             // 
-            // pBar1
-            // 
-            this.pBar1.Location = new System.Drawing.Point(124, 588);
-            this.pBar1.Name = "pBar1";
-            this.pBar1.Size = new System.Drawing.Size(444, 24);
-            this.pBar1.TabIndex = 19;
-            // 
             // sLabel
             // 
             this.sLabel.AutoSize = true;
-            this.sLabel.Location = new System.Drawing.Point(12, 596);
+            this.sLabel.Location = new System.Drawing.Point(12, 587);
             this.sLabel.Name = "sLabel";
             this.sLabel.Size = new System.Drawing.Size(0, 15);
             this.sLabel.TabIndex = 20;
             // 
-            // Form1
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.Location = new System.Drawing.Point(305, 587);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(0, 15);
+            this.status.TabIndex = 21;
+            // 
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 617);
+            this.ClientSize = new System.Drawing.Size(579, 610);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.sLabel);
-            this.Controls.Add(this.pBar1);
             this.Controls.Add(this.rCount);
             this.Controls.Add(this.cCount);
             this.Controls.Add(this.zCount);
@@ -292,8 +293,8 @@ namespace MD5Duplicate
             this.Controls.Add(this.SQLGrid);
             this.Controls.Add(this.zipGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "formMain";
+            this.Text = "MD5 Hash Check";
             ((System.ComponentModel.ISupportInitialize)(this.zipGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SQLGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -322,10 +323,10 @@ namespace MD5Duplicate
         private System.Windows.Forms.Label zCount;
         private System.Windows.Forms.Label cCount;
         private System.Windows.Forms.Label rCount;
-        private System.Windows.Forms.ProgressBar pBar1;
         private System.Windows.Forms.Button flder;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label sLabel;
+        private System.Windows.Forms.Label status;
     }
 }
 
