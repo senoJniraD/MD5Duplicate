@@ -8,4 +8,4 @@ You'll also need to confirm all datatable columns in the main.cs file match your
   
   Broken - ToDo:
   If the images you unzipped reside in a sub-folder outside of the selected zip directory, 
-  you'll need to unzip the images manually then use the 'Folder' options to navigate to and select the listeral path of the images.
+  you'll need to unzip the images manually then use the 'Folder' options to navigate to and select the literal path of the images.
