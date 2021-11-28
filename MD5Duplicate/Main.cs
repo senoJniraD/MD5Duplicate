@@ -205,7 +205,7 @@ namespace MD5Duplicate
                     {
                         File.Copy(sFile + ".tiff", dFile + ".tiff", true);
                     }
-                    if (File.Exists(sFile + ".tif"))
+                    if (File.Exists(sFile + ".svg"))
                     {
                         File.Copy(sFile + ".svg", dFile + ".svg", true);
                     }
