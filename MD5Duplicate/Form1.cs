@@ -90,7 +90,6 @@ namespace MD5Duplicate
             if (mfgBox.Text == "")
             {
                 MessageBox.Show("Please Input A Valid Vendor ID!");
-
             }
 
 //GATHER FILE HASH INFO
