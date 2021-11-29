@@ -184,14 +184,16 @@ namespace MD5Duplicate
 //MOVE NET CHANGES TO NEW DIRECTORY
                 Directory.CreateDirectory(newDirName);
 
-                foreach (DataRow fName in compare.Rows)
+                List<string> s = compare.AsEnumerable().Select(x => x[0].ToString()).ToList();
+
+                foreach (string img in s)
                 {
-                    string dFile = Path.Combine(newDirName, fName.ToString());
-                    string sFile = Path.Combine(workingPath, fName.ToString());
+                    string dFile = Path.Combine(newDirName, img.ToString());
+                    string sFile = Path.Combine(workingPath, img.ToString());
 
                     if (File.Exists(sFile + ".jpg"))
                     {
-                        File.Copy(sFile + ".jpg", dFile + ".jpg", true);
+                        File.Copy(sFile, dFile, true);
                     }
                     if (File.Exists(sFile + ".bmp"))
                     {
@@ -221,6 +223,8 @@ namespace MD5Duplicate
                     {
                         File.Copy(sFile + ".webp", dFile + ".webp", true);
                     }
+
+                    MessageBox.Show(img.ToString() + "+" + sFile); //diagnostic
                     
                 }
 //CONFIRM IMAGES POPULATED NEW DIRECTORY

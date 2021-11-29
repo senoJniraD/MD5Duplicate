@@ -26,7 +26,8 @@ namespace MD5Duplicate.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FDGD;Initial Catalog=test_2;User ID=DFGD;Password=DFGDG")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GN105NK;Initial Catalog=test_2;Persist Security Info=True;Use" +
+            "r ID=diskobat;Password=Atc200x1")]
         public string ConString {
             get {
                 return ((string)(this["ConString"]));
