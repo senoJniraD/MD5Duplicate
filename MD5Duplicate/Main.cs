@@ -188,43 +188,43 @@ namespace MD5Duplicate
 
                 foreach (string img in s)
                 {
-                    string dFile = Path.Combine(newDirName, img.ToString());
-                    string sFile = Path.Combine(workingPath, img.ToString());
+                    string dFile = Path.Combine(newDirName, img.Replace(".jpg", "").ToString());
+                    string sFile = Path.Combine(workingPath, img.Replace(".jpg", "").ToString());
 
                     if (File.Exists(sFile + ".jpg"))
                     {
-                        File.Copy(sFile, dFile, true);
+                        File.Move(sFile + ".jpg", dFile + ".jpg", true);
                     }
                     if (File.Exists(sFile + ".bmp"))
                     {
-                        File.Copy(sFile + ".bmp", dFile + ".bmp", true);
+                        File.Move(sFile + ".bmp", dFile + ".bmp", true);
                     }
                     if (File.Exists(sFile + ".jpeg"))
                     {
-                        File.Copy(sFile + ".jpeg", dFile + ".jpeg", true);
+                        File.Move(sFile + ".jpeg", dFile + ".jpeg", true);
                     }
                     if (File.Exists(sFile + ".tiff"))
                     {
-                        File.Copy(sFile + ".tiff", dFile + ".tiff", true);
+                        File.Move(sFile + ".tiff", dFile + ".tiff", true);
                     }
                     if (File.Exists(sFile + ".svg"))
                     {
-                        File.Copy(sFile + ".svg", dFile + ".svg", true);
+                        File.Move(sFile + ".svg", dFile + ".svg", true);
                     }
                     if (File.Exists(sFile + ".gif"))
                     {
-                        File.Copy(sFile + ".gif", dFile + ".gif", true);
+                        File.Move(sFile + ".gif", dFile + ".gif", true);
                     }
                     if (File.Exists(sFile + ".png"))
                     {
-                        File.Copy(sFile + ".png", dFile + ".png", true);
+                        File.Move(sFile + ".png", dFile + ".png", true);
                     }
                     if (File.Exists(sFile + ".webp"))
                     {
-                        File.Copy(sFile + ".webp", dFile + ".webp", true);
+                        File.Move(sFile + ".webp", dFile + ".webp", true);
                     }
 
-                    MessageBox.Show(img.ToString() + "+" + sFile); //diagnostic
+                    //MessageBox.Show(img.ToString() + " + " + sFile); //diagnostic
                     
                 }
 //CONFIRM IMAGES POPULATED NEW DIRECTORY
@@ -239,7 +239,7 @@ namespace MD5Duplicate
                 }
                 else
                 {
-                    MessageBox.Show("File Count mismatch in '"+newDirName+"'." +
+                    MessageBox.Show("File count mismatch in '"+newDirName+"'." +
                         " Please confirm there are supposed to be files in this directory." +
                         " If so, Please extract the ZIP file manually and confirm the images are not within a sud-directory." +
                         " Then use the 'FOLDER' button to choose your extracted images folder.","Opps...");

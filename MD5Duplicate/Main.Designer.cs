@@ -29,6 +29,8 @@ namespace MD5Duplicate
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.fButton = new System.Windows.Forms.Button();
             this.pBox = new System.Windows.Forms.TextBox();
             this.mfgBox = new System.Windows.Forms.TextBox();
@@ -49,10 +51,13 @@ namespace MD5Duplicate
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.sLabel = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.zipGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SQLGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // fButton
@@ -62,6 +67,7 @@ namespace MD5Duplicate
             this.fButton.Size = new System.Drawing.Size(75, 23);
             this.fButton.TabIndex = 0;
             this.fButton.Text = "Get Files";
+            this.toolTip1.SetToolTip(this.fButton, "This button will start the extraction and comparison process.");
             this.fButton.UseVisualStyleBackColor = true;
             this.fButton.Click += new System.EventHandler(this.go_Click);
             // 
@@ -69,6 +75,7 @@ namespace MD5Duplicate
             // 
             this.pBox.Location = new System.Drawing.Point(6, 16);
             this.pBox.Name = "pBox";
+            this.pBox.PlaceholderText = "Path to Image ZIP or FOLDER";
             this.pBox.Size = new System.Drawing.Size(401, 23);
             this.pBox.TabIndex = 4;
             // 
@@ -76,6 +83,7 @@ namespace MD5Duplicate
             // 
             this.mfgBox.Location = new System.Drawing.Point(6, 60);
             this.mfgBox.Name = "mfgBox";
+            this.mfgBox.PlaceholderText = "3 digit MFG";
             this.mfgBox.Size = new System.Drawing.Size(100, 23);
             this.mfgBox.TabIndex = 5;
             // 
@@ -86,6 +94,8 @@ namespace MD5Duplicate
             this.cButton.Size = new System.Drawing.Size(66, 23);
             this.cButton.TabIndex = 6;
             this.cButton.Text = "File";
+            this.toolTip1.SetToolTip(this.cButton, "This button will open a file chooser for you to located a\r\nZIP file you want to e" +
+        "xtract.");
             this.cButton.UseVisualStyleBackColor = true;
             this.cButton.Click += new System.EventHandler(this.file_Click);
             // 
@@ -169,6 +179,8 @@ namespace MD5Duplicate
             this.flder.Size = new System.Drawing.Size(66, 23);
             this.flder.TabIndex = 8;
             this.flder.Text = "Folder";
+            this.toolTip1.SetToolTip(this.flder, "This button will open a folder browser for you to locate a folder\r\n where images " +
+        "are already extracted.");
             this.flder.UseVisualStyleBackColor = true;
             this.flder.Click += new System.EventHandler(this.flder_Click);
             // 
@@ -275,6 +287,20 @@ namespace MD5Duplicate
             this.status.Size = new System.Drawing.Size(0, 15);
             this.status.TabIndex = 21;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(496, 587);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 23);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipTitle = "Read for usage:";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -286,6 +312,7 @@ namespace MD5Duplicate
             this.Controls.Add(this.cCount);
             this.Controls.Add(this.zCount);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.resGrid);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -293,13 +320,15 @@ namespace MD5Duplicate
             this.Controls.Add(this.SQLGrid);
             this.Controls.Add(this.zipGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
-            this.Text = "MD5 Hash Check";
+            this.Text = "MD5 Duplicate Remover";
             ((System.ComponentModel.ISupportInitialize)(this.zipGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SQLGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,6 +356,8 @@ namespace MD5Duplicate
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label sLabel;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
