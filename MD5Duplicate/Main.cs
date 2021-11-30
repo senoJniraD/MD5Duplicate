@@ -245,11 +245,11 @@ namespace MD5Duplicate
                         " Then use the 'FOLDER' button to choose your extracted images folder.","Opps...");
                 }
 
-//DELETE WORKING DIRECTORY AND OPEN NEW DIRECTORY
-                if (sLabel.Text == "Zip Selected")
-                {
-                    Directory.Delete(workingPath, true);
-                }
+//DELETE WORKING DIRECTORY - NOT USED FOR NOW
+                //if (sLabel.Text == "Zip Selected")
+                //{
+                //    Directory.Delete(workingPath, true);
+                //}
 
                 status.Text = "Complete!";
 
